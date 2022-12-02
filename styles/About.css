@@ -1,0 +1,33 @@
+.container-about {
+  display: flex;
+  width: 100%;
+  transform: translateX(156px);
+}
+
+.about {
+  /* margin-left: 156px; */
+}
+
+.title-about {
+  font-family: "Rokkitt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 68px;
+
+  color: #ffffff;
+}
+
+.text-about {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #ffffff;
+}
+
+.image {
+  transform: translate(30px, 150px);
+}

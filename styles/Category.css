@@ -1,0 +1,25 @@
+.category-text {
+  margin-left: 156px;
+}
+
+.title-category {
+  font-family: "Rokkitt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 68px;
+  color: #ffffff;
+}
+
+.text-books-list {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+}
+
+.display-category-books {
+}

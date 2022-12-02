@@ -1,0 +1,116 @@
+.library-title {
+  font-family: "Rokkitt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 68px;
+
+  color: #ffffff;
+
+  margin-left: 156px;
+}
+
+.search {
+  /* margin-left: 156px; */
+}
+.search-bar {
+  display: block;
+  width: 552px;
+  height: 46px;
+  border-radius: 100px;
+  background: url("../assets/search.svg") 20px #5c5c5c no-repeat;
+  padding-left: 60px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar::placeholder {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #aaaaaa;
+}
+
+.display-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.add {
+  width: 264px;
+  height: 381px;
+  background: url("../assets/plus-square.svg") no-repeat;
+}
+
+.add-book {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+}
+
+.title-book-library {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ffffff;
+}
+
+.author-book-library {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+}
+
+.rental-price {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ff4e16;
+}
+
+.bottom-nav {
+  display: flex;
+  margin: 20px 0px;
+  gap: 50px;
+  justify-content: center;
+}
+
+.bottom-nav li {
+  display: block;
+  float: left;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #e3e3e3;
+}
+
+.selected {
+  background: #ff4e16;
+  border-radius: 100px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}

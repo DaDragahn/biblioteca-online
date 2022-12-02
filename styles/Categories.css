@@ -1,0 +1,57 @@
+.title-categories {
+  font-family: "Rokkitt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 68px;
+
+  color: #ffffff;
+  margin-left: 156px;
+}
+
+.search-bar-cat {
+  display: block;
+  width: 552px;
+  height: 46px;
+  border-radius: 100px;
+  background: url("../assets/search.svg") 20px #5c5c5c no-repeat;
+  padding-left: 60px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar::placeholder {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #aaaaaa;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 264px 264px 264px 264px;
+  justify-content: center;
+  gap: 0px 40px;
+}
+
+.category {
+  width: 264px;
+  height: 43px;
+  background: none;
+  border: 3px solid #e3e3e3;
+  border-radius: 100px;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ffffff;
+
+  margin: 12px 16px;
+}

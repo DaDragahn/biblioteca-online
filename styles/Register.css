@@ -1,0 +1,173 @@
+.container {
+  margin: 150px 0;
+  display: flex;
+  width: 100%;
+}
+
+.showcase {
+  position: relative;
+  margin-left: 156px;
+  width: 100%;
+  height: fit-content;
+}
+
+.title-request {
+  font-family: "Rokkitt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 59px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+#quote {
+  font-family: "Rubik";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #e3e3e3;
+}
+
+#author {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #e3e3e3;
+}
+
+#book2 {
+  transform: translateX(-45%);
+}
+
+#book3 {
+  transform: translateX(-90%);
+}
+
+#book4 {
+  transform: translateX(-136%);
+}
+
+.register {
+  position: relative;
+  transform: translate(-200px, 0px);
+  height: fit-content;
+}
+
+.title-register {
+  font-family: "Rokkitt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 45px;
+
+  color: #ffffff;
+}
+
+.input-text {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 0;
+  padding-left: 10px;
+  margin-top: 10px;
+  width: 360px;
+  height: 46px;
+  font-family: "Arial";
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+.text-check {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #e3e3e3;
+}
+
+.check {
+  background-color: #252525;
+  margin-bottom: 20px;
+}
+
+.register-button {
+  border-radius: 50px;
+  background-color: #ff4e16;
+  width: 360px;
+  height: 43px;
+  color: #ffffff;
+  border: 0;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: center;
+}
+
+.text-other {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+  text-align: center;
+}
+
+.buttons-login {
+  display: flex;
+}
+
+.other-login {
+  width: 105px;
+  height: 43px;
+
+  background: #ffffff;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+
+.logo {
+  background-color: #ffffff;
+}
+
+.line {
+  border: 0;
+  border-top: 1px solid #e3e3e3;
+
+  width: 216px;
+  height: 1px;
+  color: #ffffff;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.already-registered-button {
+  width: 360px;
+  height: 43px;
+  background: none;
+  border-color: #ffffff;
+  border-radius: 50px;
+  border-width: 3px;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ffffff;
+}

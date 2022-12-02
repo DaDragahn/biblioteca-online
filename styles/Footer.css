@@ -1,0 +1,67 @@
+.container-footer {
+  margin-top: 60px;
+  margin-left: 156px;
+  display: flex;
+  width: 100%;
+}
+
+.title {
+  font-family: "Rokkitt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 45px;
+  color: #e3e3e3;
+}
+
+.text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #e3e3e3;
+}
+
+.inscrever {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.input-email {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 0;
+  padding-left: 10px;
+  margin-top: 10px;
+  width: 360px;
+  height: 46px;
+  font-family: "Arial";
+  color: #aaaaaa;
+}
+
+.inscrever-button {
+  border-radius: 50px;
+  background-color: #ff4e16;
+  width: 168px;
+  height: 43px;
+  color: #ffffff;
+  border: 0;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: center;
+
+  margin-top: 12px;
+  margin-left: 20px;
+}
+
+.images {
+  transform: translateX(430px);
+}

@@ -33,10 +33,13 @@ const RegisterDisplay = () => {
         <input className="input-text" placeholder="Password" />
         <input className="input-text" placeholder="Confirmar Password" />
 
-        <label className="text-check">
-          <input className="check" type="checkbox" name="check" />
-          Inscrever-me na newsletter
-        </label>
+        <div>
+          <label className="text-check">
+            <input className="check" type="checkbox" name="check" />
+            Inscrever-me na newsletter
+          </label>
+        </div>
+
         <button className="register-button">Registar</button>
 
         <p className="text-other">Registar com a sua conta</p>

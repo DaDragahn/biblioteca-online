@@ -8,6 +8,7 @@ import "../styles/Login.css";
 import "../styles/Register.css";
 import "../styles/Footer.css";
 import "../styles/Category.css";
+import "../styles/Book.css";
 
 import type { AppProps } from "next/app";
 

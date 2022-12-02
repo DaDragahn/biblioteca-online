@@ -8,7 +8,8 @@ import book7 from "../assets/book7.png";
 import book8 from "../assets/book8.png";
 
 const HomeDisplay = () => {
-  const [bookDisplay, setBookDisplay] = useState([
+  // const [bookDisplay, setBookDisplay] = useState([
+  const bookDisplay = [
     {
       img: book5,
       title: "War & Peace",
@@ -29,7 +30,7 @@ const HomeDisplay = () => {
       title: "Grandes Palavras Pequenas Ações",
       author: "Joana Santos",
     },
-  ]);
+  ];
 
   return (
     <div>
@@ -59,13 +60,28 @@ const HomeDisplay = () => {
         </div>
 
         <div className="display">
-          {bookDisplay.map((book) => (
-            <figure>
-              <Image src={book.img} width="264" height="381" alt="" />
-              <figcaption className="book-title">{book.title}</figcaption>
-              <figcaption className="book-author">{book.author}</figcaption>
-            </figure>
-          ))}
+          {bookDisplay.map((book) => {
+            if (book.title === "Torne-se um decifrador de pessoas") {
+              return (
+                <Link href={"/book"}>
+                  <figure>
+                    <Image src={book.img} width="264" height="381" alt="" />
+                    <figcaption className="book-title">{book.title}</figcaption>
+                    <figcaption className="book-author">
+                      {book.author}
+                    </figcaption>
+                  </figure>
+                </Link>
+              );
+            }
+            return (
+              <figure>
+                <Image src={book.img} width="264" height="381" alt="" />
+                <figcaption className="book-title">{book.title}</figcaption>
+                <figcaption className="book-author">{book.author}</figcaption>
+              </figure>
+            );
+          })}
         </div>
       </div>
     </div>

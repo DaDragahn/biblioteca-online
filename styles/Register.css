@@ -93,8 +93,24 @@
   color: #e3e3e3;
 }
 
+/* input[type="checkbox"] {
+  appearance: none;
+  background-color: none;
+  margin: 0;
+  font: inherit;
+  color: #ff4e16;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #ff4e16;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+} */
+
+/* input[type="checkbox"]:checked::before {
+  transform: scale(1);
+} */
+
 .check {
-  background-color: #252525;
   margin-bottom: 20px;
 }
 

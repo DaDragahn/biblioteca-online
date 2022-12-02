@@ -33,7 +33,9 @@ const LoginDisplay = () => {
           <input className="check" type="checkbox" name="check" />
           Lembrar-me nas próximas sessões
         </label>
-        <button className="sign-in-button">Login</button>
+        <button className="sign-in-button">
+          <Link href={"/home"}>Login</Link>
+        </button>
 
         <hr className="line" />
         <button className="not-registered-button">

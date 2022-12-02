@@ -1,0 +1,163 @@
+.category-path {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: 156px;
+}
+
+.text-category-path {
+  font-family: "Rokkitt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #ff4e16;
+  margin: 0;
+}
+
+.text-category-title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #e3e3e3;
+  margin: 0;
+}
+
+.display-book {
+  display: flex;
+  align-items: top;
+  margin-left: 116px;
+  margin-top: 10px;
+}
+
+.icons {
+  margin-top: 20px;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+}
+
+.number-review {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+
+  color: #ffffff;
+  margin-left: 8px;
+}
+
+.book-info {
+  margin-left: 47px;
+}
+
+.author-title {
+  display: flex;
+  align-items: center;
+}
+
+#title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+
+  color: #ffffff;
+}
+
+#author {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+  margin: 0 10px 0 0;
+}
+
+#category {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #aaaaaa;
+
+  margin: 0 0 0 10px;
+}
+
+#editor {
+  display: flex;
+  align-items: center;
+}
+
+#text-editor {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ffffff;
+}
+
+#rental {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+
+  color: #ff4e16;
+}
+
+#request-button {
+  border-radius: 50px;
+  background-color: #ff4e16;
+  width: 168px;
+  height: 43px;
+  color: #ffffff;
+  border: 0;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: center;
+}
+
+#request-button::before {
+  content: "Requisitar";
+}
+
+#return-button {
+  width: 168px;
+  height: 43px;
+  background: none;
+  border-color: #ffffff;
+  border-radius: 50px;
+  border-width: 3px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+#return-button::before {
+  content: "Devolver";
+}

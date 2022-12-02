@@ -12,6 +12,7 @@ import book7 from "../assets/book7.png";
 import book8 from "../assets/book8.png";
 import prev from "../assets/previous.svg";
 import next from "../assets/next.svg";
+import Link from "next/link";
 
 const BooksDisplay = () => {
   // const [books, setBooks] = useState([
@@ -78,23 +79,38 @@ const BooksDisplay = () => {
           <Image src={plus} className="plus" alt="" />
           <figcaption className="add-book">Adicionar um livro</figcaption>
         </figure>
-        {books.map((book) => (
-          <figure>
-            {/* <AiOutlineHeart size="24px" color="#ff4e16" /> */}
-            <Image
-              src={book.img}
-              className="plus"
-              width="264"
-              height="381"
-              alt=""
-            />
-            <figcaption className="title-book-library">{book.title}</figcaption>
-            <figcaption className="author-book-library">
-              {book.author}
-            </figcaption>
-            <figcaption className="rental-price">{book.rental}</figcaption>
-          </figure>
-        ))}
+        {books.map((book) => {
+          if (book.title === "Torne-se um decifrador de pessoas") {
+            return (
+              <Link href={"/book"}>
+                <figure>
+                  <Image src={book.img} width="264" height="381" alt="" />
+                  <figcaption className="book-title">{book.title}</figcaption>
+                  <figcaption className="book-author">{book.author}</figcaption>
+                </figure>
+              </Link>
+            );
+          }
+          return (
+            <figure>
+              {/* <AiOutlineHeart size="24px" color="#ff4e16" /> */}
+              <Image
+                src={book.img}
+                className="plus"
+                width="264"
+                height="381"
+                alt=""
+              />
+              <figcaption className="title-book-library">
+                {book.title}
+              </figcaption>
+              <figcaption className="author-book-library">
+                {book.author}
+              </figcaption>
+              <figcaption className="rental-price">{book.rental}</figcaption>
+            </figure>
+          );
+        })}
       </div>
 
       <div>

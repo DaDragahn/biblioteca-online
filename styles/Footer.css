@@ -12,6 +12,7 @@
   font-size: 40px;
   line-height: 45px;
   color: #e3e3e3;
+  margin: 0;
 }
 
 .text {
@@ -63,5 +64,9 @@
 }
 
 .images {
-  transform: translateX(430px);
+  transform: translateX(300px);
+}
+
+#person {
+  margin-left: 24px;
 }

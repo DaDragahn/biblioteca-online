@@ -20,8 +20,8 @@ const FooterDisplay = () => {
       </div>
 
       <div className="images">
-        <Image src={bookshelves} alt="" />
-        <Image src={person} alt="" />
+        <Image id="bookshelves" src={bookshelves} alt="" />
+        <Image id="person" src={person} alt="" />
       </div>
     </div>
   );

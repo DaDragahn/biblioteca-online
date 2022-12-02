@@ -4,26 +4,51 @@ import english from "../assets/english.svg";
 import select from "../assets/select.svg";
 import Link from "next/link";
 import Image from "next/image";
+import React, { useState } from "react";
 
 const Header = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
+    // if (event.currentTarget.className != "active") {
+    // console.log(true);
+    // event.currentTarget.classList.remove("active");
+    //   event.currentTarget.classList.add("active");
+    // }
+    // event.currentTarget.classList.add("active");
+    // setIsActive((current) => !current);
+  };
+
   return (
     <div className="App-header">
       <Image src={logo} className="App-logo" alt="logo" />
 
       <nav>
         <ul className="header">
-          <li>
+          <li className={"active"} onClick={handleClick}>
             <Link href="/">Home</Link>
           </li>
-          <li>
+          <li className={"active"} onClick={handleClick}>
             <Link href="/books">Livros</Link>
           </li>
-          <li>
+          <li className={"active"} onClick={handleClick}>
             <Link href="/categories">Categorias</Link>
           </li>
-          <li>
+          <li className={"active"} onClick={handleClick}>
             <Link href="/about">Sobre Nós</Link>
           </li>
+          {/* <li className={isActive ? "active" : " "} onClick={handleClick}>
+            <Link href="/">Home</Link>
+          </li>
+          <li className={isActive ? "active" : " "} onClick={handleClick}>
+            <Link href="/books">Livros</Link>
+          </li>
+          <li className={isActive ? "active" : " "} onClick={handleClick}>
+            <Link href="/categories">Categorias</Link>
+          </li>
+          <li className={isActive ? "active" : " "} onClick={handleClick}>
+            <Link href="/about">Sobre Nós</Link>
+          </li> */}
         </ul>
       </nav>
 

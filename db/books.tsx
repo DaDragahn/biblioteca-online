@@ -44,7 +44,7 @@ const books: Books = {
     title: "Torne-se um decifrador de pessoas",
     author: "Alexandre Monteiro",
     rental: 2,
-    tag: "Desenvolvimento Pessoal",
+    tag: "Desenvolvimento pessoal",
   },
   "7": {
     img: "/book7.png",
@@ -57,7 +57,7 @@ const books: Books = {
     title: "Grandes Palavras Pequenas Ações",
     author: "Joana Santos",
     rental: 1.3,
-    tag: "Desenvolvimento Pessoal",
+    tag: "Desenvolvimento pessoal",
   },
 };
 

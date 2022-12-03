@@ -56,6 +56,11 @@
   color: #ffffff;
 }
 
+.icon {
+  position: absolute;
+  transform: translate(219px, 20px);
+}
+
 .title-book-library {
   font-family: "Rubik";
   font-style: normal;
@@ -64,6 +69,7 @@
   line-height: 19px;
 
   color: #ffffff;
+  margin-top: 10px;
 }
 
 .author-book-library {
@@ -74,6 +80,7 @@
   line-height: 17px;
 
   color: #ffffff;
+  margin-top: 10px;
 }
 
 .rental-price {
@@ -84,6 +91,7 @@
   line-height: 24px;
 
   color: #ff4e16;
+  margin-top: 10px;
 }
 
 .bottom-nav {

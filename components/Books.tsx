@@ -32,8 +32,8 @@ const BooksDisplay = () => {
           return (
             <Link href={`/book/${bookId}`}>
               <figure>
-                <div>
-                  {/* <AiOutlineHeart size="24px" color="#ff4e16" /> */}
+                <div className="icon">
+                  <AiOutlineHeart size="24px" color="#ff4e16" />
                 </div>
 
                 <Image

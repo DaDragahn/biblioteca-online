@@ -22,4 +22,39 @@
 }
 
 .display-category-books {
+  display: flex;
+  margin-left: 116px;
+}
+
+.title-book-category {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 10px;
+
+  color: #ffffff;
+}
+
+.author-book-category {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.rental-price-category {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ff4e16;
+  margin-top: 10px;
 }

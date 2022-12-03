@@ -17,6 +17,27 @@ const BookDisplay = ({ book }: BookDisplayProps) => {
   const [open, setOpen] = useState(false);
   const [submit, setSubmit] = useState(false);
   const [back, setBack] = useState(false);
+  const [request, setRequest] = useState(true);
+  const [btnReturn, setBtnReturn] = useState(false);
+  const [returnModal, setReturnModal] = useState(false);
+  const [submitReturn, setSubmitReturn] = useState(false);
+
+  console.log(
+    "open:",
+    open,
+    "submit:",
+    submit,
+    "back:",
+    back,
+    "request:",
+    request,
+    "btnReturn:",
+    btnReturn,
+    "returnModal:",
+    returnModal,
+    "submitReturn",
+    submitReturn
+  );
 
   return (
     <div>
@@ -55,12 +76,24 @@ const BookDisplay = ({ book }: BookDisplayProps) => {
 
           <p id="rental">{book.rental}€/semana</p>
 
-          <button
-            id={submit ? "return-button" : "request-button"}
-            onClick={() => setOpen(true)}
-          >
-            {submit ? "Devolver" : "Requisitar"}
-          </button>
+          <div>
+            {/* <button
+              id={submit ? "return-button" : "request-button"}
+              onClick={() => setOpen(true)}
+            >
+              {submit ? "Devolver" : "Requisitar"}
+            </button> */}
+            {request ? (
+              <button id="request-button" onClick={() => setOpen(true)}>
+                Requisitar
+              </button>
+            ) : null}
+            {btnReturn ? (
+              <button id="return-button" onClick={() => setReturnModal(true)}>
+                Devolver
+              </button>
+            ) : null}
+          </div>
         </div>
       </div>
       {open ? (
@@ -121,14 +154,92 @@ const BookDisplay = ({ book }: BookDisplayProps) => {
               <p className="confirmed-text">Requisitou o livro com sucesso</p>
             </div>
             <div className="button-container">
-              <button className="back-button" onClick={() => setBack(true)}>
+              <button
+                className="back-button"
+                onClick={() => {
+                  setBtnReturn(true);
+                  setBack(true);
+                  setOpen(false);
+                  setRequest(false);
+                  setSubmit(false);
+                }}
+              >
                 Voltar
               </button>
             </div>
           </div>
         </div>
       ) : null}
-      {/* {submit && back && !open ? <div className="backdrop"></div> : null} */}
+      {returnModal ? (
+        <div className="backdrop" onClick={() => setReturnModal(false)}>
+          <div
+            className="modal-return"
+            onClick={(event) => event.stopPropagation}
+          >
+            <div className="modal-header">
+              <h1 className="return-title">Devolver Livro</h1>
+              <div className="close-icon" onClick={() => setReturnModal(false)}>
+                <IoCloseCircleOutline size={24} color="#ffffff" />
+              </div>
+            </div>
+            <div>
+              <p className="review-text">
+                Diga-nos a sua opinião sobre este livro.
+              </p>
+            </div>
+            <div className="images-container">
+              <figure className="review-icon">
+                <Image src={like} alt="" width={42} height={40} />
+                <figcaption className="review-icon-text">Gostei</figcaption>
+              </figure>
+              <figure className="review-icon">
+                <Image src={dislike} alt="" width={42} height={40} />
+                <figcaption className="review-icon-text">Não Gostei</figcaption>
+              </figure>
+            </div>
+            <div className="button-container">
+              <button
+                className="return-button"
+                onClick={() => {
+                  setSubmitReturn(true);
+                  setReturnModal(false);
+                  setBack(false);
+                }}
+              >
+                Devolver
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
+      {!returnModal && submitReturn ? (
+        <div className="backdrop" onClick={(event) => event.stopPropagation()}>
+          <div
+            className="modal-confirmed"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="confirmed-container">
+              <h1 className="request-title">Livro devolvido</h1>
+              <p className="confirmed-text">Devolveu o livro, obrigado!</p>
+            </div>
+            <div className="button-container">
+              <button
+                className="back-button"
+                onClick={() => {
+                  setRequest(true);
+                  setBtnReturn(false);
+                  setBack(false);
+                  setOpen(false);
+                  setSubmit(false);
+                  setSubmitReturn(false);
+                }}
+              >
+                Voltar
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };

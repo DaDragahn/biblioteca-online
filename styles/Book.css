@@ -325,3 +325,71 @@
 
   text-align: center;
 }
+
+.modal-return {
+  width: 42%;
+  height: 363px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #252525;
+  border-radius: 20px;
+}
+
+.return-title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+
+  color: #ffffff;
+}
+
+.review-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #e3e3e3;
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+.review-icon-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+}
+
+.return-button {
+  border-radius: 50px;
+  background-color: #ff4e16;
+  width: 168px;
+  height: 43px;
+  color: #ffffff;
+  border: 0;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: center;
+}

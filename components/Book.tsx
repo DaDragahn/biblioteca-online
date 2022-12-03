@@ -17,32 +17,17 @@ const BookDisplay = ({ book }: BookDisplayProps) => {
   const [open, setOpen] = useState(false);
   const [submit, setSubmit] = useState(false);
   const [back, setBack] = useState(false);
-  const [request, setRequest] = useState(true);
+  const [btnRequest, setBtnRequest] = useState(true);
   const [btnReturn, setBtnReturn] = useState(false);
   const [returnModal, setReturnModal] = useState(false);
   const [submitReturn, setSubmitReturn] = useState(false);
 
-  console.log(
-    "open:",
-    open,
-    "submit:",
-    submit,
-    "back:",
-    back,
-    "request:",
-    request,
-    "btnReturn:",
-    btnReturn,
-    "returnModal:",
-    returnModal,
-    "submitReturn",
-    submitReturn
-  );
-
   return (
     <div>
       <div className="category-path">
-        <p className="text-category-path">A nossa biblioteca</p>
+        <Link href={"/categories"}>
+          <p className="text-category-path">A nossa biblioteca</p>
+        </Link>
         <Image src={next} alt="" height={24} width={24} />
         <p className="text-category-title">{book.title}</p>
       </div>
@@ -83,7 +68,7 @@ const BookDisplay = ({ book }: BookDisplayProps) => {
             >
               {submit ? "Devolver" : "Requisitar"}
             </button> */}
-            {request ? (
+            {btnRequest ? (
               <button id="request-button" onClick={() => setOpen(true)}>
                 Requisitar
               </button>
@@ -115,7 +100,7 @@ const BookDisplay = ({ book }: BookDisplayProps) => {
                   <option>Quantas semanas? </option>
                   {/* </optgroup> */}
                   {/* <optgroup className="options"> */}
-                  <option value={book.rental}>1 semanas</option>
+                  <option value={book.rental}>1 semana</option>
                   <option value={book.rental * 2}>2 semanas</option>
                   <option value={book.rental * 3}>3 semanas</option>
                   {/* </optgroup> */}
@@ -160,7 +145,7 @@ const BookDisplay = ({ book }: BookDisplayProps) => {
                   setBtnReturn(true);
                   setBack(true);
                   setOpen(false);
-                  setRequest(false);
+                  setBtnRequest(false);
                   setSubmit(false);
                 }}
               >
@@ -226,7 +211,7 @@ const BookDisplay = ({ book }: BookDisplayProps) => {
               <button
                 className="back-button"
                 onClick={() => {
-                  setRequest(true);
+                  setBtnRequest(true);
                   setBtnReturn(false);
                   setBack(false);
                   setOpen(false);

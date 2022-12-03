@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import bookshelves from "../assets/bookshelves.svg";
 import person from "../assets/pessoa.svg";
 import Image from "next/image";
 
 const FooterDisplay = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="container-footer">
       <div className="newsletter">
@@ -15,7 +17,12 @@ const FooterDisplay = () => {
             type="text"
             placeholder="Email"
           ></input>
-          <button className="inscrever-button">Inscrever</button>
+          <button
+            className="inscrever-button"
+            onClick={() => setOpenModal(true)}
+          >
+            Inscrever
+          </button>
         </div>
       </div>
 
@@ -23,6 +30,31 @@ const FooterDisplay = () => {
         <Image id="bookshelves" src={bookshelves} alt="" />
         <Image id="person" src={person} alt="" />
       </div>
+      {openModal ? (
+        <div className="backdrop" onClick={(event) => event.stopPropagation()}>
+          <div
+            className="modal-subscribe"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="registered-modal-container">
+              <h1 className="registered-modal-title">Registo concluído</h1>
+              <p className="registered-modal-text">
+                Por favor, confirme o seu e-mail para validar o seu e-mail.
+              </p>
+            </div>
+            <div className="button-modal-container">
+              <button
+                className="back-button"
+                onClick={() => {
+                  setOpenModal(false);
+                }}
+              >
+                Voltar
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };

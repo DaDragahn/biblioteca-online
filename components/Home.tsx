@@ -66,7 +66,7 @@ const HomeDisplay = () => {
             const book = books[bookId];
             if (book.title === "Torne-se um decifrador de pessoas") {
               return (
-                <Link href={"/book"}>
+                <Link href={`/book/${bookId}`}>
                   <figure>
                     <Image src={book.img} width="264" height="381" alt="" />
                     <figcaption className="book-title">{book.title}</figcaption>

@@ -43,14 +43,22 @@ const CategoryDisplay = ({ category }: CategoryDisplayProps) => {
             );
           }
         })}
-        {show ? (
+
+        {/* <div className="no-book-found">
+          <p className="no-book-found-text">
+            Parece que não temos livros da categoria que escolheu
+          </p>
+          <button className="back-categories-button">Voltar</button>
+        </div> */}
+
+        {/* {show ? (
           <div className="no-book-found">
             <p className="no-book-found-text">
               Parece que não temos livros da categoria que escolheu
             </p>
             <button className="back-categories-button">Voltar</button>
           </div>
-        ) : null}
+        ) : null} */}
       </div>
     </div>
   );

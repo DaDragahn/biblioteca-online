@@ -122,3 +122,69 @@
   height: 25px;
   text-align: center;
 }
+
+.modal-add-book {
+  width: 62.5%;
+  height: 531px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #252525;
+  border-radius: 20px;
+}
+
+.modal-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-text-modal {
+  width: 796px;
+  height: 46px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 0;
+  padding-left: 24px;
+  margin-top: 10px;
+
+  font-family: "Arial";
+  color: #aaaaaa;
+  margin-bottom: 15px;
+}
+
+.modal-text-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-load-image {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-decoration-line: underline;
+
+  color: #ff4e16;
+}
+
+.modal-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-btn {
+  border-radius: 50px;
+  background-color: #ff4e16;
+  width: 168px;
+  height: 43px;
+  color: #ffffff;
+  border: 0;
+  margin-top: 10px;
+}

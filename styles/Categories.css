@@ -9,6 +9,11 @@
   margin-left: 156px;
 }
 
+.search {
+  display: flex;
+  justify-content: center;
+}
+
 .search-bar-cat {
   display: block;
   width: 552px;
@@ -17,11 +22,9 @@
   background: url("../assets/search.svg") 20px #5c5c5c no-repeat;
   padding-left: 60px;
   margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.search-bar::placeholder {
+.search-bar-cat::placeholder {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;

@@ -5,19 +5,10 @@ import select from "../assets/select.svg";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 const Header = () => {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
-    // if (event.currentTarget.className != "active") {
-    // console.log(true);
-    // event.currentTarget.classList.remove("active");
-    //   event.currentTarget.classList.add("active");
-    // }
-    // event.currentTarget.classList.add("active");
-    // setIsActive((current) => !current);
-  };
+  const router = useRouter();
 
   return (
     <div className="App-header">
@@ -25,30 +16,18 @@ const Header = () => {
 
       <nav>
         <ul className="header">
-          <li className={"active"} onClick={handleClick}>
+          <li className={router.pathname === "/" ? "active" : ""}>
             <Link href="/">Home</Link>
           </li>
-          <li className={"active"} onClick={handleClick}>
+          <li className={router.pathname === "/books" ? "active" : ""}>
             <Link href="/books">Livros</Link>
           </li>
-          <li className={"active"} onClick={handleClick}>
+          <li className={router.pathname === "/categories" ? "active" : ""}>
             <Link href="/categories">Categorias</Link>
           </li>
-          <li className={"active"} onClick={handleClick}>
+          <li className={router.pathname === "/about" ? "active" : ""}>
             <Link href="/about">Sobre Nós</Link>
           </li>
-          {/* <li className={isActive ? "active" : " "} onClick={handleClick}>
-            <Link href="/">Home</Link>
-          </li>
-          <li className={isActive ? "active" : " "} onClick={handleClick}>
-            <Link href="/books">Livros</Link>
-          </li>
-          <li className={isActive ? "active" : " "} onClick={handleClick}>
-            <Link href="/categories">Categorias</Link>
-          </li>
-          <li className={isActive ? "active" : " "} onClick={handleClick}>
-            <Link href="/about">Sobre Nós</Link>
-          </li> */}
         </ul>
       </nav>
 

@@ -2,35 +2,37 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import book from "../assets/book.svg";
-import book5 from "../assets/book5.png";
-import book6 from "../assets/book6.png";
-import book7 from "../assets/book7.png";
-import book8 from "../assets/book8.png";
+import books from "../db/books";
+
+// import book5 from "../assets/book5.png";
+// import book6 from "../assets/book6.png";
+// import book7 from "../assets/book7.png";
+// import book8 from "../assets/book8.png";
 
 const HomeDisplay = () => {
-  // const [bookDisplay, setBookDisplay] = useState([
-  const bookDisplay = [
-    {
-      img: book5,
-      title: "War & Peace",
-      author: "Leo Tolstoy",
-    },
-    {
-      img: book6,
-      title: "Torne-se um decifrador de pessoas",
-      author: "Alexandre Monteiro",
-    },
-    {
-      img: book7,
-      title: "A Powerful Path",
-      author: "Haven Obrien",
-    },
-    {
-      img: book8,
-      title: "Grandes Palavras Pequenas Ações",
-      author: "Joana Santos",
-    },
-  ];
+  const bookDisplay = ["5", "6", "7", "8"];
+  // const bookDisplay = [
+  //   {
+  //     img: book5,
+  //     title: "War & Peace",
+  //     author: "Leo Tolstoy",
+  //   },
+  //   {
+  //     img: book6,
+  //     title: "Torne-se um decifrador de pessoas",
+  //     author: "Alexandre Monteiro",
+  //   },
+  //   {
+  //     img: book7,
+  //     title: "A Powerful Path",
+  //     author: "Haven Obrien",
+  //   },
+  //   {
+  //     img: book8,
+  //     title: "Grandes Palavras Pequenas Ações",
+  //     author: "Joana Santos",
+  //   },
+  // ];
 
   return (
     <div>
@@ -60,7 +62,8 @@ const HomeDisplay = () => {
         </div>
 
         <div className="display">
-          {bookDisplay.map((book) => {
+          {bookDisplay.map((bookId) => {
+            const book = books[bookId];
             if (book.title === "Torne-se um decifrador de pessoas") {
               return (
                 <Link href={"/book"}>

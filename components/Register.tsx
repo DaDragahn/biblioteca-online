@@ -1,8 +1,4 @@
 import React from "react";
-import book1 from "../assets/book1.png";
-import book2 from "../assets/book2.png";
-import book3 from "../assets/book3.png";
-import book4 from "../assets/book4.png";
 import google from "../assets/google.png";
 import apple from "../assets/apple.png";
 import facebook from "../assets/facebook.png";
@@ -16,10 +12,28 @@ const RegisterDisplay = () => {
         <h1 className="title-request">
           Requisite, adicione <br /> e partilhe livros!
         </h1>
-        <Image src={book1} alt="book1" width={211} />
-        <Image id="book2" src={book2} alt="book2" width={220} />
-        <Image id="book3" src={book3} alt="book3" width={212} />
-        <Image id="book4" src={book4} alt="book4" width={211} />
+        <Image src={"/book1.png"} alt="book1" width={211} height={326} />
+        <Image
+          id="book2"
+          src={"/book2.png"}
+          alt="book2"
+          width={220}
+          height={326}
+        />
+        <Image
+          id="book3"
+          src={"/book3.png"}
+          alt="book3"
+          width={212}
+          height={326}
+        />
+        <Image
+          id="book4"
+          src={"/book4.png"}
+          alt="book4"
+          width={211}
+          height={326}
+        />
         <p id="quote">
           “Respirei fundo e escutei o velho e orgulhoso som do meu <br />
           coração. Eu sou, eu sou, eu sou.”

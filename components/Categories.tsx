@@ -31,8 +31,8 @@ const CategoriesDisplay = () => {
 
   return (
     <div>
+      <h1 className="title-categories">Que categorias é que procura?</h1>
       <div className="search">
-        <h1 className="title-categories">Que categorias é que procura?</h1>
         <input
           className="search-bar-cat"
           type="text"

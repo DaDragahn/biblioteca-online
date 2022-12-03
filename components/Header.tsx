@@ -1,11 +1,13 @@
-import logo from "../assets/decode_logo.svg";
-import portugal from "../assets/portugal.svg";
-import english from "../assets/english.svg";
-import select from "../assets/select.svg";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+
+import logo from "../assets/decode_logo.svg";
+import portugal from "../assets/portugal.svg";
+import english from "../assets/english.svg";
+import select from "../assets/select.svg";
+import icon from "../assets/icon.svg";
 
 const Header = () => {
   const router = useRouter();
@@ -31,9 +33,20 @@ const Header = () => {
         </ul>
       </nav>
 
-      <button className="login-button">
-        <Link href="./login">Login</Link>
-      </button>
+      <div className="user-login-container">
+        <button className="login-button">
+          <Link href="./login">Login</Link>
+        </button>
+        <div className="logged-in">
+          <Image
+            className="user-icon"
+            src={icon}
+            alt=""
+            width={40}
+            height={40}
+          />
+        </div>
+      </div>
 
       <div id="country-select">
         <Image id="select" src={select} alt="" width={24} height={24} />

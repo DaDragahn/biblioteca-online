@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import google from "../assets/google.png";
 import apple from "../assets/apple.png";
 import facebook from "../assets/facebook.png";
@@ -6,6 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const RegisterDisplay = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="container">
       <div className="showcase">
@@ -54,7 +56,9 @@ const RegisterDisplay = () => {
           </label>
         </div>
 
-        <button className="register-button">Registar</button>
+        <button className="register-button" onClick={() => setOpen(true)}>
+          Registar
+        </button>
 
         <p className="text-other">Registar com a sua conta</p>
         <div className="buttons-login">
@@ -79,6 +83,31 @@ const RegisterDisplay = () => {
           <Link href="./login">Já tem conta? Faça Login</Link>
         </button>
       </div>
+      {open ? (
+        <div className="backdrop" onClick={(event) => event.stopPropagation()}>
+          <div
+            className="modal-registered"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="registered-container">
+              <h1 className="registered-title">Registo concluído</h1>
+              <p className="registered-text">
+                Por favor, confirme o seu e-mail para validar o seu e-mail.
+              </p>
+            </div>
+            <div className="button-container">
+              <Link href={"/"}>
+                <button
+                  className="continue-button"
+                  onClick={() => setOpen(false)}
+                >
+                  Continuar
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };

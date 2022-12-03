@@ -42,10 +42,11 @@ const LoginDisplay = () => {
         <input className="input-text" placeholder="Email" />
         <input className="input-text" placeholder="Password" />
 
-        <label className="text-check">
+        <div className="checkbox">
           <input className="check" type="checkbox" name="check" />
-          Lembrar-me nas próximas sessões
-        </label>
+          <label className="text-check">Lembrar-me nas próximas sessões</label>
+        </div>
+
         <button className="sign-in-button">
           <Link href={"/home"}>Login</Link>
         </button>

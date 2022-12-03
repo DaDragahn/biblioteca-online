@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Category } from "../db/categories";
 import books from "../db/books";
+import Link from "next/link";
 
 export interface CategoryDisplayProps {
   category: Category;
@@ -24,18 +25,20 @@ const CategoryDisplay = ({ category }: CategoryDisplayProps) => {
           console.log(book.tag);
           if (book.tag === category.cat) {
             return (
-              <figure>
-                <Image src={book.img} alt="" width={264} height={381} />
-                <figcaption className="title-book-category">
-                  {book.title}
-                </figcaption>
-                <figcaption className="author-book-category">
-                  {book.author}
-                </figcaption>
-                <figcaption className="rental-price-category">
-                  {book.rental}€/semana
-                </figcaption>
-              </figure>
+              <Link href={`/book/${bookId}`}>
+                <figure>
+                  <Image src={book.img} alt="" width={264} height={381} />
+                  <figcaption className="title-book-category">
+                    {book.title}
+                  </figcaption>
+                  <figcaption className="author-book-category">
+                    {book.author}
+                  </figcaption>
+                  <figcaption className="rental-price-category">
+                    {book.rental}€/semana
+                  </figcaption>
+                </figure>
+              </Link>
             );
           }
         })}

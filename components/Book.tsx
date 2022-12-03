@@ -8,6 +8,7 @@ import like from "../assets/like.svg";
 import dislike from "../assets/dislike.svg";
 import { AiOutlineHeart } from "react-icons/ai";
 import { RxDotFilled } from "react-icons/rx";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 export interface BookDisplayProps {
   book: Book;
@@ -15,6 +16,7 @@ export interface BookDisplayProps {
 const BookDisplay = ({ book }: BookDisplayProps) => {
   const [open, setOpen] = useState(false);
   const [submit, setSubmit] = useState(false);
+  const [back, setBack] = useState(false);
 
   return (
     <div>
@@ -63,18 +65,70 @@ const BookDisplay = ({ book }: BookDisplayProps) => {
       </div>
       {open ? (
         <div className="backdrop" onClick={() => setOpen(false)}>
-          <div className="modal" onClick={(event) => event.stopPropagation()}>
-            Here I am
-            <button
-              id="request-button"
-              onClick={() => {
-                setOpen(false);
-                setSubmit(true);
-              }}
-            ></button>
+          <div
+            className="modal-request"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="modal-header">
+              <h1 className="request-title">Requisitar Livro</h1>
+              <div className="close-icon" onClick={() => setOpen(false)}>
+                <IoCloseCircleOutline size={24} color="#ffffff" />
+              </div>
+            </div>
+            <div className="rent-book">
+              <div className="selector">
+                <select className="weeks-select">
+                  {/* <optgroup className="placeholder"> */}
+                  <option>Quantas semanas? </option>
+                  {/* </optgroup> */}
+                  {/* <optgroup className="options"> */}
+                  <option value={book.rental}>1 semanas</option>
+                  <option value={book.rental * 2}>2 semanas</option>
+                  <option value={book.rental * 3}>3 semanas</option>
+                  {/* </optgroup> */}
+                </select>
+              </div>
+              <label className="price-week">
+                Este livro tem um custo de {book.rental}€/semana{" "}
+              </label>
+              <div className="total-price">
+                <p className="total">Total:</p>
+                <h1 className="price">0.00€</h1>
+              </div>
+            </div>
+            <div className="button-container">
+              <button
+                id="request-button"
+                onClick={() => {
+                  setOpen(false);
+                  setSubmit(true);
+                }}
+              >
+                Requisitar
+              </button>
+            </div>
           </div>
         </div>
       ) : null}
+      {submit && !back ? (
+        <div className="backdrop" onClick={(event) => event.stopPropagation()}>
+          <div
+            className="modal-confirmed"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="confirmed-container">
+              <h1 className="request-title">Livro requisitado</h1>
+              <p className="confirmed-text">Requisitou o livro com sucesso</p>
+            </div>
+            <div className="button-container">
+              <button className="back-button" onClick={() => setBack(true)}>
+                Voltar
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
+      {/* {submit && back && !open ? <div className="backdrop"></div> : null} */}
     </div>
   );
 };

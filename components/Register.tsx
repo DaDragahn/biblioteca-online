@@ -45,9 +45,17 @@ const RegisterDisplay = () => {
 
       <div className="register">
         <h2 className="title-register">Registar</h2>
-        <input className="input-text" placeholder="Email" />
-        <input className="input-text" placeholder="Password" />
-        <input className="input-text" placeholder="Confirmar Password" />
+        <input className="input-text" type={"email"} placeholder="Email" />
+        <input
+          className="input-text"
+          type={"password"}
+          placeholder="Password"
+        />
+        <input
+          className="input-text"
+          type={"password"}
+          placeholder="Confirmar Password"
+        />
 
         <div>
           <label className="text-check">

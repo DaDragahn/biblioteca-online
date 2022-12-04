@@ -14,7 +14,7 @@ const FooterDisplay = () => {
         <div className="inscrever">
           <input
             className="input-email"
-            type="text"
+            type={"email"}
             placeholder="Email"
           ></input>
           <button

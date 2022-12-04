@@ -39,8 +39,12 @@ const LoginDisplay = () => {
 
       <div className="login">
         <h2 className="title-login">Login</h2>
-        <input className="input-text" placeholder="Email" />
-        <input className="input-text" placeholder="Password" />
+        <input className="input-text" type={"email"} placeholder="Email" />
+        <input
+          className="input-text"
+          type={"password"}
+          placeholder="Password"
+        />
 
         <div className="checkbox">
           <input className="check" type="checkbox" name="check" />
